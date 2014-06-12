@@ -19,8 +19,8 @@ echo "(>^.^<)"
 
 " 4.1
 " Set up a mapping so that you can press <c-u>(Ctrl+u) to convert the current word to uppercase when you're in insert mode.
-:imap <c-u> <esc>veUi
+:imap <c-u> <esc>bveUi
 
 " 4.2
 " Set up a mapping so that you can uppercase the current word with <c-u> when in normal mode.
-:nmap <c-u> veU<esc>
+:nmap <c-u> bveU<esc>

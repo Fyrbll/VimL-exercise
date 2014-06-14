@@ -5,7 +5,7 @@
 echo "(>^.^<)"
 
 " 3.1
-" Map the '-' key to "delete" the current line, then paste it below the one we're on now.
+" Map the '-' key to delete the current line, then paste it below the one we're on now.
 map - dd p
 
 " 3.2
@@ -16,6 +16,8 @@ map _ dd P
 " how you might remove a mapping and reset a key to its normal function.
 " btw this is not the right way to do this everytime, it also depends on mode
 unmap <key>
+
+" Some Problem with 4.1 and 4.2 ?
 
 " 4.1
 " Set up a mapping so that you can press <c-u>(Ctrl+u) to convert the current word to uppercase when you're in insert mode.
@@ -38,3 +40,27 @@ nnoremap H 0
 " Map L in normal mode to go to the end of the current line.
 nnoremap L $
 
+" 15.1
+" Create operator-pending mappings for around next parentheses
+" ':help omap-info' helped me with the ':<c-u>normal!' thing
+onoremap an( :<c-u>normal! f(hviw<cr>
+
+" 15.2
+" Create operator-pending mappings for around last parentheses
+onoremap al( :<c-u>normal! F(bviw<cr>
+
+" 15.3
+" Create operator-pending mappings for in next curly brackets
+onoremap in{ :<c-u>normal! f{vi{<cr>
+
+" 15.4
+" Create operator-pending mappings for in last curly brackets
+onoremap il{ :<c-u>normal! F}vi{<cr>
+
+" 15.5
+" Create operator-pending mappings for around next curly brackets
+onoremap an{ :<c-u>normal! f{hviw<cr>
+
+" 15.6
+" Create operator-pending mappings for around last curly brackets
+onoremap al{ :<c-u>normal! F{bviw<cr>

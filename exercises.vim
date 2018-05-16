@@ -79,3 +79,24 @@ onoremap ah :<c-u>execute "normal! ?^\\(==\\+\\)\\\|\\(--\\+\\)$\r:nohlsearch\rg
 "       It ought to be good enough for everyday use for most people.
 onoremap in@ :<c-u>execute "normal! /\\([.-]\\\|\\w\\)\\+@\\(\\w\\)\\+\\.\\(\\w\\)\\+\r:nohlsearch\rviW"<cr><cr>
 
+" 17.1
+" Add some lines to your ~/.vimrc file to build yourself a custom status line
+" Using the commands below will make the status line look like:
+" MODE:n  EDITING: ~/.vim/vimrc on raspberrypi              LOCATION: 36/122=29%
+" display the current mode (i for insert, v for visual, n for normal, ...)
+set statusline=MODE:%-2{mode()}
+" display the name of the file in the current buffer
+set statusline+=\ EDITING:\ %f
+" display the name of the machine we're using vim on
+set statusline+=\ on\ %{hostname()}
+" display a + if the buffer has been edited since the last time it was written
+set statusline+=%M
+" align all subsequent statusline additions to the right
+set statusline+=%=
+" display the number of the current line and the total number of lines
+set statusline+=LOCATION:\ %l/%-L
+" display the fraction of the lines in the file that are above the cursor
+" basically <current line>/<total lines> as a percentage
+set statusline+==%p%%
+" a space at the end to make things look prettier
+set statusline+=\ 

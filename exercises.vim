@@ -100,3 +100,14 @@ set statusline+=LOCATION:\ %l/%-L
 set statusline+==%p%%
 " a space at the end to make things look prettier
 set statusline+=\ 
+
+" 17.2
+" Try using autocommands and setlocal to define different statuslines for different filetypes
+" I couldn't really think of anything better than displaying how single-line and multi-line comments
+" are written in Haskell files (it's definitely more practical to just use a mapping)
+" The command below displays the way single-line comments are written
+autocmd FileType haskell setlocal statusline=SINGLE\ LINE\ COMMENT\ --
+" Align all subsequent statusline additions to the right
+autocmd FileType haskell setlocal statusline+=%=
+" The command below displays the way multi-line comments are written
+autocmd FileType haskell setlocal statusline+=MULTI\ LINE\ COMMENT\ \{-\|...-\}

@@ -64,3 +64,18 @@ onoremap an{ :<c-u>normal! f{hviw<cr>
 " 15.6
 " Create operator-pending mappings for around last curly brackets
 onoremap al{ :<c-u>normal! F{bviw<cr>
+
+" 16.1
+" Create operator-pending mapping for 'in immediate markdown heading or sub-heading'
+onoremap ih :<c-u>execute "normal! ?^\\(==\\+\\)\\\|\\(--\\+\\)$\r:nohlsearch\rkvg_"<cr>
+
+" 16.2
+" Create operator-pending mapping for 'around immediate markdown heading or sub-heading'
+onoremap ah :<c-u>execute "normal! ?^\\(==\\+\\)\\\|\\(--\\+\\)$\r:nohlsearch\rg_vk0"<cr>
+
+" 16.3
+" Create operator-pending mapping for 'in next email address'
+" NOTE: The mapping below is based on 'ordinary' email addresses and does not support the full specification.
+"       It ought to be good enough for everyday use for most people.
+onoremap in@ :<c-u>execute "normal! /\\([.-]\\\|\\w\\)\\+@\\(\\w\\)\\+\\.\\(\\w\\)\\+\r:nohlsearch\rviW"<cr><cr>
+

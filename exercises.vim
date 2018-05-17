@@ -111,3 +111,8 @@ autocmd FileType haskell setlocal statusline=SINGLE\ LINE\ COMMENT\ --
 autocmd FileType haskell setlocal statusline+=%=
 " The command below displays the way multi-line comments are written
 autocmd FileType haskell setlocal statusline+=MULTI\ LINE\ COMMENT\ \{-\|...-\}
+
+" 18.1
+" Create a git or mercurial repository, move your vimrc file into it and put it on GitHub so that people
+" can look at it and get ideas for their own
+" CHECK my_vimrc.vim IN THIS REPOSITORY FOR THE CONTENTS OF MY CONFIGURATION FILE, WITH EXPLANATORY COMMENTS

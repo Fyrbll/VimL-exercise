@@ -123,3 +123,7 @@ autocmd FileType haskell setlocal statusline+=MULTI\ LINE\ COMMENT\ \{-\|...-\}
 " NUMBER: Setting wrap to any number other than 0 activates the wrap feature
 " STRING: Setting it to a string (say, "alpha") results in the following error- 
 " Number required: &wrap = 'alpha'
+
+" 27.1
+" Run :echo split('1 2') and :echo split('1,,,2', ','). Do they behave the same?
+" No, they don't. The former evaluates to ['1', '2'] and the latter to ['1','','','2']

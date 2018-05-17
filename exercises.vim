@@ -116,3 +116,10 @@ autocmd FileType haskell setlocal statusline+=MULTI\ LINE\ COMMENT\ \{-\|...-\}
 " Create a git or mercurial repository, move your vimrc file into it and put it on GitHub so that people
 " can look at it and get ideas for their own
 " CHECK my_vimrc.vim IN THIS REPOSITORY FOR THE CONTENTS OF MY CONFIGURATION FILE, WITH EXPLANATORY COMMENTS
+
+" 19.1
+" Try setting a boolean option like wrap to something other than 0 or 1
+" What happens when you set it to a different number? What happens when you set it to a string?
+" NUMBER: Setting wrap to any number other than 0 activates the wrap feature
+" STRING: Setting it to a string (say, "alpha") results in the following error- 
+" Number required: &wrap = 'alpha'

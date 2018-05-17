@@ -95,7 +95,7 @@ iabbrev adn and
 iabbrev waht what
 " corrects 'tehn' to 'then'
 iabbrev tehn then
-" inserts my email address
+" inserts an email address
 iabbrev @@ localname@domain.com
 " inserts some copyright information
 iabbrev ccopy Copyright 2018 Firstname Lastname, all rights reserved

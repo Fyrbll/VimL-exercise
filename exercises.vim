@@ -127,3 +127,9 @@ autocmd FileType haskell setlocal statusline+=MULTI\ LINE\ COMMENT\ \{-\|...-\}
 " 27.1
 " Run :echo split('1 2') and :echo split('1,,,2', ','). Do they behave the same?
 " No, they don't. The former evaluates to ['1', '2'] and the latter to ['1','','','2']
+
+" 28.1
+" Add a mapping to your vim configuration file that opens the previous buffer in a split of your choosing
+" (horizontal/vertical, left/right/top/bottom)
+" opens the previous buffer above the current one in a vertical split
+nnoremap <leader>ep :execute "topleft split " . bufname("#") <cr>

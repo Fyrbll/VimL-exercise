@@ -136,3 +136,23 @@ nnoremap <leader>ep :execute "topleft split " . bufname("#") <cr>
 " 29.1
 " Try to make a mapping that will let you delete two lines but undo each deletion separately
 nnoremap <leader>D ddi<C-G>u<esc>dd
+
+" 31.1
+" Edit your vim config file to add a mapping that will use match to highlight trailing whitespace
+" as an error
+nnoremap <leader>w :match Error /\s\+$/<cr>
+
+" 31.2
+" Add another mapping that will clear the match
+nnoremap <leader>W :match none<cr>
+
+" 31.3
+" Add a normal mode mapping that will automatically insert the \v for you whenever you begin
+" a search
+" NOTE: I added one mapping for forward search and one for backward search
+nnoremap / /\v
+nnoremap ? ?\v
+
+" 31.4
+" Add a mapping to "stop highlighting items from the last search" to your vim config file
+nnoremap \H :nohlsearch<cr>

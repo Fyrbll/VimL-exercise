@@ -131,5 +131,8 @@ autocmd FileType haskell setlocal statusline+=MULTI\ LINE\ COMMENT\ \{-\|...-\}
 " 28.1
 " Add a mapping to your vim configuration file that opens the previous buffer in a split of your choosing
 " (horizontal/vertical, left/right/top/bottom)
-" opens the previous buffer above the current one in a vertical split
 nnoremap <leader>ep :execute "topleft split " . bufname("#") <cr>
+
+" 29.1
+" Try to make a mapping that will let you delete two lines but undo each deletion separately
+nnoremap <leader>D ddi<C-G>u<esc>dd

@@ -156,3 +156,8 @@ nnoremap ? ?\v
 " 31.4
 " Add a mapping to "stop highlighting items from the last search" to your vim config file
 nnoremap \H :nohlsearch<cr>
+
+" 32.1
+" Add a height to the :copen command in the grep operator to make sure the quickfix window is opened
+" to whatever height you prefer
+nnoremap <leader>g :silent execute "grep! -R " . shellescape(expand("<cWORD>")) . " ."<cr>:copen 5<cr>

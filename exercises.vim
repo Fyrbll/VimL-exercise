@@ -179,3 +179,12 @@ au BufNewFile,BufRead *.pn setfiletype potion
 " If you decide to do so, add it to the syntax file
 " I DON'T WANT TO CALL IT AN OPERATOR.
 " It's for the same reason that I don't think : is an operator.
+
+" 45.3
+" Read the Potion docs and make a conscious decision about whether to make / an operator.
+" If you decide to do so, add it to the syntax file
+" I WANT TO CALL THIS ONE AN OPERATOR.
+" / acts like a function that takes an 'instance' of a class and a string, and returns
+" the value of the property of the instance with the same name as the string
+" Basically it's like an accessor function, so I'm perfectly happy calling it an operator
+" What's odd is that it's already being highlighted as the division operator so I'm not changing anything

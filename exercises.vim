@@ -164,4 +164,4 @@ nnoremap <leader>g :silent execute "grep! -R " . shellescape(expand("<cWORD>")) 
 
 " 44.1
 " Modify the Potion plugin's ftdetect/potion.vim script to use setfiletype instead of set filetype
-au BufNewFile,BufRead *.pn setfiletype=potion
+au BufNewFile,BufRead *.pn setfiletype potion

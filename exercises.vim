@@ -173,3 +173,9 @@ au BufNewFile,BufRead *.pn setfiletype potion
 " I believe that for : to be an operator, it has to (at least) be a Potion function that takes
 " one or more Potion datatype values (primitive or user-defined) and outputs a value of a
 " Potion datatype. It doesn't fulfil this requirement.
+
+" 45.2
+" Read the Potion docs and make a conscious decision about whether to make . an operator.
+" If you decide to do so, add it to the syntax file
+" I DON'T WANT TO CALL IT AN OPERATOR.
+" It's for the same reason that I don't think : is an operator.

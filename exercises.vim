@@ -166,7 +166,7 @@ nnoremap <leader>g :silent execute "grep! -R " . shellescape(expand("<cWORD>")) 
 " Modify the Potion plugin's ftdetect/potion.vim script to use setfiletype instead of set filetype
 au BufNewFile,BufRead *.pn setfiletype potion
 
-" 45.1
+" 46.1
 " Read the Potion docs and make a conscious decision about whether to make : an operator.
 " If you decide to do so, add it to the syntax file
 " I DON'T WANT TO CALL IT AN OPERATOR.
@@ -174,13 +174,13 @@ au BufNewFile,BufRead *.pn setfiletype potion
 " one or more Potion datatype values (primitive or user-defined) and outputs a value of a
 " Potion datatype. It doesn't fulfil this requirement.
 
-" 45.2
+" 46.2
 " Read the Potion docs and make a conscious decision about whether to make . an operator.
 " If you decide to do so, add it to the syntax file
 " I DON'T WANT TO CALL IT AN OPERATOR.
 " It's for the same reason that I don't think : is an operator.
 
-" 45.3
+" 46.3
 " Read the Potion docs and make a conscious decision about whether to make / an operator.
 " If you decide to do so, add it to the syntax file
 " I WANT TO CALL THIS ONE AN OPERATOR.
@@ -188,3 +188,18 @@ au BufNewFile,BufRead *.pn setfiletype potion
 " the value of the property of the instance with the same name as the string
 " Basically it's like an accessor function, so I'm perfectly happy calling it an operator
 " What's odd is that it's already being highlighted as the division operator so I'm not changing anything
+
+" 46.4
+" Add a syntax group PotionNumber that highlights numbers. Link it to the highlight group Number.
+" supports numbers like 123, 456, 10
+syntax match potionNumber "\v\d+"
+" supports numbers like 0xefef
+syntax match potionNumber "\v0x\x+"
+" supports numbers like 1e+10, 515e-2
+syntax match potionNumber "\v\d+e[+-]\d+"
+" supports numbers like 1.21, 3.141, 2.0
+syntax match potionNumber "\v\d+\.\d+"
+" supports numbers like 1.21e-1, 10.1e+3
+syntax match potionNumber "\v\d+\.\d+e[+-]\d+"
+" links the syntax group to the highlight group
+highlight link potionNumber Number

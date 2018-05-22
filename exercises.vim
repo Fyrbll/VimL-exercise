@@ -203,3 +203,7 @@ syntax match potionNumber "\v\d+\.\d+"
 syntax match potionNumber "\v\d+\.\d+e[+-]\d+"
 " links the syntax group to the highlight group
 highlight link potionNumber Number
+
+" 47.1
+" Add syntax highlighting for single-quoted strings
+syntax region potionString start=/\v'/ skip=/\v''/ end=/\v'/

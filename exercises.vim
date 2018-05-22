@@ -165,3 +165,11 @@ nnoremap <leader>g :silent execute "grep! -R " . shellescape(expand("<cWORD>")) 
 " 44.1
 " Modify the Potion plugin's ftdetect/potion.vim script to use setfiletype instead of set filetype
 au BufNewFile,BufRead *.pn setfiletype potion
+
+" 45.1
+" Read the Potion docs and make a conscious decision about whether to make : an operator.
+" If you decide to do so, add it to the syntax file
+" I DON'T WANT TO CALL IT AN OPERATOR.
+" I believe that for : to be an operator, it has to (at least) be a Potion function that takes
+" one or more Potion datatype values (primitive or user-defined) and outputs a value of a
+" Potion datatype. It doesn't fulfil this requirement.

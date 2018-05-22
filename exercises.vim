@@ -161,3 +161,7 @@ nnoremap \H :nohlsearch<cr>
 " Add a height to the :copen command in the grep operator to make sure the quickfix window is opened
 " to whatever height you prefer
 nnoremap <leader>g :silent execute "grep! -R " . shellescape(expand("<cWORD>")) . " ."<cr>:copen 5<cr>
+
+" 44.1
+" Modify the Potion plugin's ftdetect/potion.vim script to use setfiletype instead of set filetype
+au BufNewFile,BufRead *.pn setfiletype=potion
